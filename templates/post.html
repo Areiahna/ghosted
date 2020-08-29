@@ -1,0 +1,22 @@
+<a href="/">
+    <h2>Home</h2>
+</a> <a href="/sorted/">
+    <h2>Sort by votes</h2>
+</a> <a href="/roast/">
+    <h2>Roast</h2>
+</a> <a href="/boast/">
+    <h2>Boast</h2>
+</a>
+<a href="/post/">
+    <h2>Create Post</h2>
+</a>
+<hr>
+
+<form action="" method="post">
+    </a>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <a href="/"><input type="submit" onfocus="this.value" value="Submit"></a>
+
+</form>

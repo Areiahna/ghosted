@@ -1,0 +1,35 @@
+<a href="/">
+    <h2>Home</h2>
+</a> <a href="sorted/">
+    <h2>Sort by votes</h2>
+</a> <a href="roast/">
+    <h2>Roast</h2>
+</a> <a href="boast/">
+    <h2>Boast</h2>
+</a>
+<a href="post/">
+    <h2>Create Post</h2>
+</a>
+<hr>
+
+<div class="container">
+    <!-- https://stackoverflow.com/questions/48438575/call-django-on-html-button-click/48438962 -->
+    {% for posted in post %}
+    <h1>{{posted.post}}</h1>
+    <h1>{{posted}}
+        <br>
+        <div class="votes">
+            <form action="action.url" method="GET">
+                <button type="submit"><a href="/upvote/{{posted.id}}">UPVOTE</a></button> <button type="submit"><a
+                        href="/downvote/{{posted.id}}">DOWNVOTE</a></button>
+            </form>
+        </div>
+        {{posted.upvotes}}
+        <br>
+        <br>
+        {{posted.post_date}}
+    </h1>
+    <hr>
+
+    {% endfor %}
+</div>
